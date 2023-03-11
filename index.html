@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>SORTING VISUALIZER</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <img id="logoimg" src="logo.png" alt="Sorting Visuals" class="navbar-brand logo">
+            <span id="logoname" class="abc">SORTING VISUALIZER</span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn btn-light active" aria-current="page" href="#" onclick="location.href='index.html'" id="homebtn">HOME</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light" aria-current="page" href="#" id="bubblesortbtn">BUBBLE</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light" href="#" id="selectionsortbtn">SELECTION</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light" href="#" id="insertionsortbtn">INSERTION</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light" id="mergesortbtn">MERGE</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-light" href="about.html" onclick="location.href='about.html' " id="aboutbtn">About</button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content blur">
+        <div class="buttons">
+            <button class="btn btn-warning" id="randomizebtn">RANDOMIZE</button>
+            <div class="cont">
+                <h5 style="color: white;">ELEMENTS</h5> <input type="range" min="5" max="150" step="5" id="rangebar" class="rangebar">
+                <span style="visibility: hidden;">BARS</span> <h5 style="color: white;">SPEED : </h5> <input type="range" min="10" max="200" step="20" id="speedrangebar" class="rangebar"> 
+
+            </div>
+
+        </div>
+        <div class="bars_container" id="bars_container">
+
+        </div>
+
+    </div>
+    <div class="aboutalgorithms row" id="aboutalgorithms">
+        <div class="algorithmsDesc">
+            <h3 style="color: whitesmoke; text-align: left;">SORTING ALGORITHMS</h3>
+            <p style="color: white; font-size: x-large;">
+                Sorting algorithms are used to sort a data structure according to a specific order relationship, such as numerical order or lexicographical order.
+                <br> This operation is one of the most important and widespread in computer science. For a long time, new methods have been developed to make this procedure faster and faster.
+                <br> There are currently hundreds of different sorting algorithms, each with its own specific characteristics. They are classified according to two metrics: space complexity and time complexity.
+                <br> Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ, Ω, representing respectively the upper bound, the tight bound, and the lower bound of the algorithm's complexity, specifying in
+                brackets an expression in terms of n, the number of the elements of the data structure.
+
+            </p>
+            <ul>
+                <h5 style="color: white;">MOST OF THE ALGORITHMS FALL INTO TWO CATEGORIES</h5>
+                <li>Logarithmic</li>
+                <ld>The complexity is proportional to the binary logarithm (i.e to the base 2) of n. An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).</ld>
+                <li>Quadratic</li>
+                <ld>The complexity is proportional to the square of n.<br> An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).</ld>
+            </ul>
+            <h5>Space and time complexity can also be further subdivided into 3 different cases: best case, average case and worst case.
+            </h5>
+            <br>
+            <h5>Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their functioning while having fun!
+            </h5>
+        </div>
+
+    </div>
+    <div class="bdesc" id="bubbleSortDescription">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 d">
+                <p>
+                    <ul>
+                        <li><span style="color: red;"> Bubble sort</span> works on the repeatedly swapping of adjacent elements until they are not in the intended order. It is called bubble sort because the movement of array elements is just like the movement
+                            of air bubbles in the water. Bubbles in water rise up to the surface; similarly, the array elements in bubble sort move to the end in each iteration.
+                        </li>
+                        <li> Although it is simple to use, it is primarily used as an educational tool because the performance of bubble sort is poor in the real world. It is not suitable for large data sets. The average and worst-case complexity of Bubble
+                            sort is O(n2), where n is a number of items.</li>
+                        <li>Bubble short is majorly used where
+                            <ol>
+                                <li> complexity does not matter</li>
+                                <li>simple and shortcode is preferred</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+                </p>
+
+            </div>
+            <div class="col-lg-4 col-sm-12 x">
+                <table>
+                    <caption style="caption-side: top;">BUBBLE SORT TIME COMPLEXITIES</caption>
+                    <tr>
+                        <th>Case</th>
+                        <th>Complexity</th>
+                    </tr>
+                    <tr>
+                        <td>BEST</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>AVERAGE</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                    <tr>
+                        <td>WORST</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                </table>
+
+                <hr style="color: black;">
+                <h3>EXECUTABLE CODE FOR BUBBLE SORT</h3>
+
+                <img src="bubbleSort.png" alt="BubbleSortSnippet" style="width: 350px;">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="sdesc" id="selectionSortDescription">
+        <div class="row">
+            <div class="col-lg-9">
+                <h3>SELECTION SORT</h3>
+                <ul>
+                    <li> Selection Sort is a simple comparison-based sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of the list and putting it at the beginning of the list.
+                    </li>
+                    <li>
+                        The algorithm works by dividing the input list into two parts: the sorted part and the unsorted part. Initially, the sorted part is empty, and the unsorted part is the entire list. The algorithm then iterates through the unsorted part of the list, finding
+                        the smallest element and moving it to the beginning of the list. This process is repeated until the entire list is sorted.
+                    </li>
+                    <li>
+                        Here are the steps to perform selection sort on a list of n elements:
+                        <ol>
+                            <li>Set the minimum index to the first element of the list.</li>
+                            <li>Iterate through the unsorted part of the list, comparing each element to the minimum element found so far. If a smaller element is found, update the minimum index to that element.</li>
+                            <li>Once the end of the unsorted part of the list is reached, swap the minimum element with the first element of the unsorted part of the list.</li>
+                            <li>Repeat steps 2-3 for the remaining elements in the unsorted part of the list, until the entire list is sorted</li>
+                        </ol>
+
+                    </li>
+                    <li>Selection sort has a time complexity of O(n^2) and is generally not recommended for large data sets. However, it is useful for educational purposes, as it is easy to understand and implement. It can also be useful for sorting small
+                        data sets where simplicity is more important than speed.</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-3 x">
+                <table>
+                    <caption style="caption-side: top;">SELECTION SORT TIME COMPLEXITIES</caption>
+                    <br>
+                    <br>
+                    <tr>
+                        <th>Case</th>
+                        <th>Complexity</th>
+                    </tr>
+                    <tr>
+                        <td>BEST</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                    <tr>
+                        <td>AVERAGE</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                    <tr>
+                        <td>WORST</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                </table>
+                <hr style="color: black;">
+                <h3>EXECUTABLE SELECTION SORT CODE</h3>
+                <img src="selectionSort.png" alt="SelectionSortCodeSnippet" style="width: 350px;">
+            </div>
+        </div>
+
+    </div>
+    <div class="idesc" id="insertionSortDescription">
+        <div class="row">
+            <div class="col-lg-9">
+                <h3>INSERTION SORTING TECHNIQUE</h3>
+                <ul>
+                    <li>
+                        Insertion Sort is a simple comparison-based sorting algorithm that builds the final sorted array one item at a time. It works by dividing the input list into two parts: the sorted part and the unsorted part. Initially, the sorted part is the first element
+                        of the list, and the unsorted part is the remaining n-1 elements.
+                    </li>
+                    <li>
+                        The algorithm then iterates through the unsorted part of the list, taking one element at a time and inserting it into the correct position in the sorted part of the list. It does this by comparing the current element to each element in the sorted part
+                        of the list, starting from the right and moving left. If the current element is smaller than the element being compared, the compared element is shifted to the right, and the current element is inserted into its correct position.
+                    </li>
+                    <li>
+                        Here are the steps to perform insertion sort on a list of n elements:
+                        <ol>
+                            <li>Iterate through the unsorted part of the list, starting with the second element.</li>
+                            <li>For each element, compare it to the elements in the sorted part of the list, starting from the right and moving left.</li>
+                            <li>If the current element is smaller than the element being compared, shift the compared element to the right, and continue comparing with the next element in the sorted part of the list</li>
+                            <li>If the current element is larger than the element being compared, insert the current element into the position immediately to the right of the compared element.</li>
+                            <li>Repeat steps 2-4 for all remaining elements in the unsorted part of the list</li>
+                        </ol>
+                    </li>
+                    <li>Insertion sort has a time complexity of O(n^2), making it inefficient for large data sets. However, it is more efficient than other quadratic sorting algorithms, such as bubble sort and selection sort, when dealing with small data sets. It is also an adaptive algorithm, meaning it performs well on partially sorted lists.</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 x">
+                <table>
+                    <caption style="caption-side: top;">INSERTION SORT TIME COMPLEXITIES</caption>
+                    <br>
+                    <br>
+                    <tr>
+                        <th>Case</th>
+                        <th>Complexity</th>
+                    </tr>
+                    <tr>
+                        <td>BEST</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>AVERAGE</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                    <tr>
+                        <td>WORST</td>
+                        <td>O(n^2)</td>
+                    </tr>
+                </table>
+                <hr style="color: black;">
+                <h3>EXECUTABLE INSERTION SORT CODE</h3>
+                <img src="insertionSort.png" alt="InsertionSortCodeSnippet" style="width: 350px;">
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="copyrights">
+            <div class="links">
+                <i class="fa-brands fa-square-github gh"></i>
+                <i class="fa-brands fa-linkedin lk"></i>
+            </div>
+            <h5>DESIGNED AND DEVELOPED BY <a href="https://www.linkedin.com/in/darse-shikari-vasudev-a1522a226/">DARSE_SHIKARI_VASUDEV</a></h5>
+            <div class="cprights">
+                <i class="fa-regular fa-copyright"></i><span>  </span>ALL RIGHTS RESERVED
+            </div>
+        </div>
+        <div class="contact">
+            <i class="fa-solid fa-phone"></i>+91 8328203617
+            <span style="visibility: hidden;">HELLO</span><i class="fa-solid fa-envelope"></i>vasudevds1729@gmail.com
+            
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
+

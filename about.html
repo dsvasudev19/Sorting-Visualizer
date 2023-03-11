@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>SORTING VISUALIZER</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <img id="logoimg" src="logo.png" alt="Sorting Visuals" class="navbar-brand logo">SORTING VISUALIZER
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="btn btn-light disable" aria-current="page" href="index.html" onclick="location.href='index.html' ">HOME</button>
+                  </li>
+              <li class="nav-item">
+                <button class="btn btn-light disable" aria-current="page" href="#" id="bubblesortbtn">BUBBLE</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-light disable" href="#" id="selectionsortbtn">SELECTION</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-light disable" href="#" id="insertionsortbtn">INSERTION</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-light disable" id="mergesortbtn">MERGE</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-light active" href="#" onclick="alert('Currently you are in About Tab !')">About</button>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+        
+    <div class="content container-fluid">
+        
+            <div class="row aboutdesc">
+                <div class="col col-lg-9 data">
+                    <h4><span style="color: red; font-size: 45px; font-weight: 700; font-family: 'Montserrat', sans-serif;">Sorting</span> <span style="color: white; font-size: 30px; font-weight: 700; font-family: 'Montserrat', sans-serif;">Visualizer</span> </h4>
+                    <ul>
+                        <li> Sorting visualizer project is an interactive learning tool that makes it easier for students to understand and visualize different sorting algorithms. It provides a hands-on experience that can help students learn more effectively</li>
+                        <li>It is user-friendly and easy to use. The user interface is simple, and the project can be accessed from any web browser.</li>
+                        <li> The project is highly customizable, and users can modify it to suit their needs. They can change the speed of the visualization, select different sorting algorithms, and customize the size and color of the bars representing the values.</li>
+                        <li>It has significant educational value, as it teaches students about sorting algorithms and how they work. It also helps students develop critical thinking skills, problem-solving skills, and programming skills.</li>
+                        <li>This project is cross-platform and can be accessed from any device with an internet connection. This makes it easy for students to access the project from home or school.</li>
+                    </ul>
+                    <h4 style="text-align: left; margin-left: 10px; color: #FFAAA5; font-family: 'Montserrat', sans-serif; font-weight: 600; font-weight: bold;">FEATURES OF SORTING VISUALIZER</h4>
+                    <ol>
+                        <li>
+                            Sorting Algorithms: The project includes different sorting algorithms such as bubble sort, selection sort, insertion sort, merge sort. Users can select the algorithm they want to visualize.
+                        </li>
+                        <li>
+                            Input Options: Users can input the data to be sorted manually, or generate a random list of numbers with a specified length
+                        </li>
+                        <li>
+                            Visualization: The project provides a visual representation of the sorting process. The data is typically displayed as a bar chart, with each bar representing a value in the list. The height of the bars represents the value of the data, and the color can be used to indicate the current state of the data.
+                        </li>
+                        <li>
+                            Control Options: Users can control the speed of the visualization to help them see the sorting process in detail or to speed it up. They can also pause or restart the sorting process at any time
+                        </li>
+                    </ol>
+                    
+    
+                </div>
+                <div class="col-lg-3 image">
+                    <h4 style="color: #E384FF; ">SORTING ALGORITHMS USED</h4>
+                    <ul>
+                        <li>BUBBLE SORT</li>
+                        <li>SELECTION SORT</li>
+                        <li>INSERTIONS SORT</li>
+                        <li>MERGE SORT</li>
+                    </ul>
+                    <img src="maxresdefault.jpg" alt="image" id="sortingimage">
+                    <table>
+                        <caption style="caption-side: top; text-align: center;">TIME COMPLEXITIES</caption>
+                        <tr>
+                            <th>SORTING TECHNIQUE</th>
+                            <th>BEST CASE</th>
+                            <th>WORST CASE</th>
+                        </tr>
+                        <tr>
+                            <td>BUBBLE SORT</td>
+                            <td>O(n^2)</td>
+                            <td>O(n^2)</td>
+                        </tr>
+                        <tr>
+                            <td>SELECTION SORT</td>
+                            <td>O(n^2)</td>
+                            <td>O(n^2)</td>
+                        </tr>
+                        <tr>
+                            <td>INSERTION SORT</td>
+                            <td>O(n)</td>
+                            <td>O(n^2)</td>
+
+                        </tr>
+                        <tr>
+                            <td>MERGE SORT</td>
+                            <td>O(nlogn)</td>
+                            <td>O(nlogn)</td>
+                        </tr>
+                    </table>
+                    <!-- <img src="timec.png" alt="timecomplexityTable" id="timec"> -->
+
+                </div>
+            </div>
+    </div>
+    <br>
+    <h1 style="color: white; justify-content: center; text-align: left; margin-left:60px ;">AUTHOR</h1>
+    <br>
+    <div class="container-fluid content">
+        <div class="row author">
+            <div class="col-lg-9 aboutauthor">
+                <p></p>
+                <h5 style="font-size: larger; font-weight: 600; color: white;">Hi, I'm <span style="color: #FF4A4A;">DARSE SHIKARI VASUDEV</span> , the developer of the Sorting Visualizer project.
+                     I have a background in computer science and a passion for creating 
+                    educational tools that make complex concepts easier to understand.One of my previos projects is <a href="http://dsvasudev.000webhostapp.com/">BANKING WEBSITE</a> </h5>
+                    <h5 style="font-size: larger; font-weight: 600; color: white;"">My motivation for creating the Sorting Visualizer project was to provide a 
+                        tool that would help students learn about sorting algorithms in a fun and
+                         interactive way. I saw a need for a 
+                        tool that could provide a visual representation of the 
+                        sorting process, as this can be difficult to understand 
+                        when reading about it in a textbook.</h5>
+                    <h5 style="font-size: larger; font-weight: 600; color: white;"">During the development process, I have used HTML,CSS and JAVASCRIPT to create the
+                         user interface and visualization components. One of the biggest challenges 
+                         I faced was optimizing the performance of the visualization, as this can be
+                          resource-intensive for large data sets.</h5>
+                          <h5 style="align-items: center; justify-content: center; text-align: center; font-weight: 700; color: #F5EAEA; font-size: 30px;">CONNECT WITH ME</h5>
+                          <div class="connections">
+                            
+                            <br><br>
+                            <a href="https://github.com/dsvasudev19"> <img src="GitHub-logo.png" alt="GitHub" class="xyz" id="ghubimage"> </a>
+                            <a href="https://www.linkedin.com/in/darse-shikari-vasudev-a1522a226/"> <img class="xyz" src="linkedin.png" alt="LinkedIn"> </a>
+                            
+                           </div>
+    
+            </div>
+            <div class="col-lg-3 authorImage">
+               
+                <img src="author.jpg" alt="Author image" id="authorimage">
+            </div>
+            
+    
+        </div>
+
+    </div>
+    
+    
+    <div class="footer" >
+        <div class="copyrights">
+            <div class="links">
+                <i class="fa-brands fa-square-github gh"></i>
+                <i class="fa-brands fa-linkedin lk"></i>
+            </div>
+            <h5>DESIGNED AND DEVELOPED BY <a href="https://www.linkedin.com/in/darse-shikari-vasudev-a1522a226/">DARSE_SHIKARI_VASUDEV</a></h5>
+            <div class="cprights">
+                <i class="fa-regular fa-copyright"></i><span>  </span>ALL  RIGHTS RESERVED
+            </div>  
+        </div>
+        <div class="contact">
+            <i class="fa-solid fa-phone"></i>+91 8328203617
+            <span style="visibility: hidden;">HELLO</span><i class="fa-solid fa-envelope"></i>vasudevds1729@gmail.com
+        </div>
+        
+    </div>
+   
+<script src="aboutscript.js"></script>
+</body>
+</html>

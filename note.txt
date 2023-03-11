@@ -1,0 +1,15 @@
+Selection Sort is a simple comparison-based sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of the list and putting it at the beginning of the list.
+
+The algorithm works by dividing the input list into two parts: the sorted part and the unsorted part. Initially, the sorted part is empty, and the unsorted part is the entire list. The algorithm then iterates through the unsorted part of the list, finding the smallest element and moving it to the beginning of the list. This process is repeated until the entire list is sorted.
+
+Here are the steps to perform selection sort on a list of n elements:
+
+Set the minimum index to the first element of the list.
+
+Iterate through the unsorted part of the list, comparing each element to the minimum element found so far. If a smaller element is found, update the minimum index to that element.
+
+Once the end of the unsorted part of the list is reached, swap the minimum element with the first element of the unsorted part of the list.
+
+Repeat steps 2-3 for the remaining elements in the unsorted part of the list, until the entire list is sorted.
+
+Selection sort has a time complexity of O(n^2) and is generally not recommended for large data sets. However, it is useful for educational purposes, as it is easy to understand and implement. It can also be useful for sorting small data sets where simplicity is more important than speed.

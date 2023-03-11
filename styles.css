@@ -1,0 +1,258 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("backimage.jpg");
+    
+}
+
+.collapse{
+    justify-content: right;
+}
+#logoimg{
+    width: 80px;
+    height: 50px;
+}
+.content{
+    width: 100%;
+    height: auto;
+    /* border: 3px solid black; */
+    /* background-color: #93BFCF; */
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.animation{
+    width: 200px;
+    height: 100px;
+}
+.bars_container{
+    /* border: 2px solid red; */
+    width: 98%;
+    height: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: bisque;
+}
+.bar{
+    margin: 2px;
+    background-color: black;
+    border-radius: 5px;
+    transition: height 0.5s ease-in-out;
+}
+.footer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#6E85B7;
+    height: 10%;
+    width: 100%;
+}
+.gh,.lk{
+    margin: 5px 5px;
+}
+.gh:hover{
+    color: bisque;
+
+}
+.lk:hover{
+    color: bisque;
+
+}
+#rangebar{
+    margin-top: 10px;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    width: 200px;
+    margin-left: 30px;
+    
+}
+.buttons{
+    display: flex;
+}
+.cont{
+    margin-left: 50px;
+    display: flex;
+}
+.visited{
+    background-color: green;
+}
+.bdesc{
+    /* border: 3px solid orange; */
+    /* background-image: url("codewhite.jpg"); */
+    backdrop-filter: blur(15%);
+    color: black;
+    margin: 3px 3px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    /* margin-left: 3%; */
+    background-color: #414a7b;
+    color: #f8b118;
+    margin-bottom: 10px;
+}
+.x{
+    border-left: 3px dotted white;
+
+}
+.d{
+    padding-top: 20px 5px;
+    /* margin-left: 15px; */
+    height: fit-content;
+    align-items: center;
+    /* margin-left: 10px; */
+    text-align: left;
+    font-size: 30px;
+    /* border: 2px rebeccapurple inset; */
+}
+.aboutdesc{
+    /* border: 2px inset orangered; */
+     width: 95%;
+    height: auto;
+    display: flex;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.row{
+    display: flex;
+}
+.data{
+    /* background-image: url("backimage.jpg"); */
+    /* backdrop-filter: blur(5px); */
+}
+
+.data li{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+.image li{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: orangered;
+    font-weight: 600;
+    font-size: medium;
+    
+}
+#sortingimage{
+    width: 300px;
+    height: 250px;
+    border: 3px solid;
+}
+
+caption{
+    color:#F0A04B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+table{
+    color: #F0A04B;
+    border: 3px solid black;
+}
+tr,td,th{
+    border: 2px inset black;
+}
+.author{
+    width: 95%;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    border: black;
+   
+    /* border: 3px solid black; */
+    /* background-image: url("code.png"); */
+}
+
+.aboutauthor{
+    
+    text-align: left;
+    
+    /* width: 80%; */
+    height: auto;
+    /* border: 3px solid black; */
+    font-family: 'Montserrat', sans-serif;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+}
+.connections{
+    justify-content: center;
+    
+    display: flex;
+}
+.connections img{
+    width: 50px;
+    height: 40px;
+}
+#ghubimage{
+    border-radius: 40%;
+    margin-right: 10px;
+}
+#authorimage{
+
+    width: 300px;
+    height: 350px;
+}
+.authorImage{
+    border-left: 3px dashed white;
+}
+.image{
+    border-left: 3px dashed white;
+}
+@media (max-width:995px ){
+    .image,.authorImage,.x{
+        border-left: 0px;
+
+    }
+}
+.aboutalgorithms{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+.algorithmsDesc{
+    width: 80%;
+    height: auto;
+    color: white;
+}
+ul{
+    font-size: larger;
+}
+.sdesc{
+    background-color: #3F497F;
+    color: #F7C04A;
+    width: 100%;
+    height: auto;
+    font-size: x-large;
+}
+.x table,caption{
+    color: #191825;
+}
+.x td{
+    color: white;
+}
+.idesc{
+    background-color: #3F497F;
+    color: #F7C04A;
+}
