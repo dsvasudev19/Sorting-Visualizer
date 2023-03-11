@@ -53,7 +53,9 @@ var bars=document.getElementsByClassName("bar");
 async function sortFunction(array){
     speed=$("#speedrangebar").value;
      for(let i=0;i<array.length;i++){
+         speed=$("#speedrangebar").value;
         for(let j=0;j<array.length;j++){
+            speed=$("#speedrangebar").value;
             if(array[j+1]<array[j]){
                 for(let k=0;k<bars.length;k++){
                     if(k!== j && k!== j+1){
@@ -84,6 +86,7 @@ speed=$("#speedrangebar").value;
 async function selectionSortFunction(array){
     speed=$("#speedrangebar").value;
     for(let i=0;i<array.length;i++){
+        speed=$("#speedrangebar").value;
         for(let j=i+1;j<array.length;j++){
             if(array[j]<array[i]){
                 var temp=array[j];
@@ -111,6 +114,7 @@ speed=$("#speedrangebar").value;
 async function insertionSortFunction(arr) {
     speed=$("#speedrangebar").value;
     for (let i = 1; i < arr.length; i++) {
+        speed=$("#speedrangebar").value;
       let currentValue = arr[i]
       bars[i].style.backgroundColor="red";
       let j
