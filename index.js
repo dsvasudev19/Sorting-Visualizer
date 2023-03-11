@@ -28,7 +28,7 @@ function createBars(randomArray){
     myNode.removeChild(myNode.lastChild);
   }
 
-    w=1500/randomArray.length;
+    w=window.innerWidth/randomArray.length;
     for(let i=0;i<randomArray.length;i++){
         var bar=document.createElement("div");
         bar.classList.add("bar");
@@ -38,7 +38,7 @@ function createBars(randomArray){
         bars_container.appendChild(bar);
     }
 }
-
+speed=$("#speedrangebar").value;
 function generateRandomArray(numberOfRows){
     randomArray=[];
     for(i=0;i<numberOfRows;i++){
@@ -48,9 +48,10 @@ function generateRandomArray(numberOfRows){
    
 }
 
-
+speed=$("#speedrangebar").value;
 var bars=document.getElementsByClassName("bar");
 async function sortFunction(array){
+    speed=$("#speedrangebar").value;
      for(let i=0;i<array.length;i++){
         for(let j=0;j<array.length;j++){
             if(array[j+1]<array[j]){
@@ -79,8 +80,9 @@ async function sortFunction(array){
      
 }
 
-
+speed=$("#speedrangebar").value;
 async function selectionSortFunction(array){
+    speed=$("#speedrangebar").value;
     for(let i=0;i<array.length;i++){
         for(let j=i+1;j<array.length;j++){
             if(array[j]<array[i]){
@@ -105,8 +107,9 @@ function updateBars(array){
     }
 }
 
-
+speed=$("#speedrangebar").value;
 async function insertionSortFunction(arr) {
+    speed=$("#speedrangebar").value;
     for (let i = 1; i < arr.length; i++) {
       let currentValue = arr[i]
       bars[i].style.backgroundColor="red";
