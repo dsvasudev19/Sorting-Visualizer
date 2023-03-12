@@ -74,10 +74,10 @@ async function sortFunction(array){
                 
             
                 
-                await sleep(1000/speed);
+                await sleep(100);
             }
         }
-        await sleep(1000/speed);
+        await sleep(10);
      }
      
 }
@@ -97,10 +97,10 @@ async function selectionSortFunction(array){
              
                bars[i].style.height=array[i]*1.5*2+"px";
                bars[i].style.backgroundColor="white";
-               await sleep(100/speed);
+               await sleep(100);
             }
         }
-        await sleep(100/speed);
+        await sleep(9);
     }
 
 }
@@ -127,7 +127,7 @@ async function insertionSortFunction(arr) {
     //   bars[j+1].style.backgroundColor="red";
       bars[j+1].style.height=currentValue*3+"px";
       bars[j+1].style.backgroundColor="white";
-      await sleep(2000/speed);
+      await sleep(100);
     }
     // insertionSortFunction(arr);
     return arr
