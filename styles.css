@@ -31,7 +31,7 @@ body{
 .bars_container{
     /* border: 2px solid red; */
     width: 98%;
-    height: 95%;
+    height: auto;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -54,7 +54,7 @@ a:hover{
     align-items: center;
     text-align: center;
     background-color:#6E85B7;
-    height: 10%;
+    height: auto;
     width: 100%;
 }
 .gh,.lk{
